@@ -17,7 +17,7 @@ RUN buildDeps="libssl-dev tcl-dev libexpat1-dev libpcre3-dev libtool libaio-dev 
 	&& tar -xjf ts.tar.bz2 -C /opt/src/ts --strip-components=1 \
 	&& rm ts.tar.bz2 \
 	&& cd /opt/src/ts \
-	&& ./configure --prefix=/opt/ts \
+	&& ./configure --prefix=/opt/ts --enable-experimental-plugins \
 	&& make \
 	&& make install \
 	&& rm -r /opt/src/ts
